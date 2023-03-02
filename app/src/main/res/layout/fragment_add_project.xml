@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.addproject.AddProjectFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingBottom="@dimen/_40sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/video_thumbnail"
+                    app:layout_constraintDimensionRatio="1.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/_4sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/icPlay"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_play_circle_outline_24"
+                    app:layout_constraintBottom_toBottomOf="@id/ivImage"
+                    app:layout_constraintEnd_toEndOf="@id/ivImage"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toTopOf="@id/ivImage" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsernameTitle"
+                    style="@style/whiteTextView"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/project_name"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivImage"
+                    app:layout_constraintTop_toTopOf="@id/ivImage" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etProjectName"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:textColor="@color/white"
+                    android:background="@drawable/draw_bottom_line"
+                    android:hint="@string/type_your_project_name"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvUsernameTitle" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    style="@style/whiteTextView"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/your_name"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:textColor="@color/white"
+                    android:background="@drawable/draw_bottom_line"
+                    android:hint="@string/type_your_name"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    style="@style/whiteTextView"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/add_description"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDescription"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:textColor="@color/white"
+                    android:background="@drawable/draw_bottom_line"
+                    android:hint="@string/type_your_description"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBudget"
+                    style="@style/whiteTextView"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/add_budget"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBudget"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:background="@drawable/draw_bottom_line"
+                    android:hint="@string/type_your_budget"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvBudget" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBanner"
+                    style="@style/whiteTextView"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/upload_banner"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/etBudget" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBanner"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:textColor="@color/white"
+
+                    android:background="@drawable/draw_bottom_line"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvBanner" />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_plus"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBanner"
+                    app:layout_constraintEnd_toEndOf="@id/tvBanner"
+                    app:layout_constraintTop_toTopOf="@id/tvBanner" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUpload"
+                    style="@style/whiteTextView"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/upload_photo"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/etBanner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUpload"
+                    style="@style/editText"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:textColor="@color/white"
+                    android:background="@drawable/draw_bottom_line"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvUpload" />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_plus"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/tvUpload"
+                    app:layout_constraintEnd_toEndOf="@id/tvUpload"
+                    app:layout_constraintTop_toTopOf="@id/tvUpload" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnDone"
+                    style="@style/button"
+                    android:background="@drawable/button_white_radius_background"
+                    android:gravity="center"
+                    android:text="@string/done"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/etUpload"
+                    app:layout_constraintStart_toStartOf="@+id/etUpload"
+                    app:layout_constraintTop_toBottomOf="@id/etUpload"
+                    app:layout_constraintWidth_percent="0.3"
+                    app:textAllCaps="true" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

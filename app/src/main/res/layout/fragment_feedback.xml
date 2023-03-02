@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.feedback.FeedbackFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:background="@drawable/login_white_radius_background">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/_60sdp"
+                    android:src="@drawable/ic_submit_feedback"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTtile"
+                    style="@style/blackTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="@string/share_your_feedback"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen"
+                    app:layout_constraintEnd_toEndOf="@id/ivImage"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/blackTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/twenty_margin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/five_margin"
+                    android:text="@string/how_satisfied_are_you"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/nine"
+                    app:layout_constraintEnd_toEndOf="@id/ivImage"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/tvTtile" />
+
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintEnd_toEndOf="@id/ivImage"
+                    app:layout_constraintStart_toStartOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+                    tools:rating="3" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDeposit"
+                    style="@style/editText"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/ten_margin"
+                    android:background="@drawable/feedback_background"
+                    android:hint="@string/add_your_comment_here"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnForgot"
+                    style="@style/button"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="@id/etDeposit"
+                    app:layout_constraintTop_toBottomOf="@id/etDeposit"
+                    app:layout_constraintWidth_percent="0.3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

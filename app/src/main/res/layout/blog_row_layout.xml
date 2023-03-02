@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataModel"
+            type="com.pitch.data.model.HomeModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_thumbnail"
+                app:layout_constraintDimensionRatio="1.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/_4sdp"
+                app:riv_corner_radius_top_right="@dimen/five_margin"
+                app:riv_corner_radius_top_left="@dimen/five_margin"
+                app:riv_corner_radius_bottom_right="@dimen/five_margin"
+                app:riv_corner_radius_bottom_left="@dimen/five_margin" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/whiteTextView"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@{dataModel.title}"
+                android:textSize="@dimen/eleven"
+                app:layout_constraintEnd_toEndOf="@id/ivImage"
+                app:layout_constraintStart_toStartOf="@id/ivImage"
+                app:layout_constraintTop_toBottomOf="@id/ivImage"
+                tools:text="Magna dignissim" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

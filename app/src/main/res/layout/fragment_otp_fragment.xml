@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="otpViewModel"
+            type="com.pitch.ui.fragments.otp.OtpViewMode" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.otp.OtpFragmentFragment">
+
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rafiki"
+            app:layout_constraintBottom_toTopOf="@id/ltLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ltLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_white_radius_background"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRegister"
+                style="@style/blackTextView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:textSize="@dimen/fifteen"
+                android:text="@string/verify_your_phone_number"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/tvSubTitle"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubTitle"
+                style="@style/blackTextView"
+                android:layout_width="wrap_content"
+                android:paddingTop="@dimen/five_margin"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/please_enter_the_for_digit_otp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/nine"
+                android:layout_marginBottom="@dimen/twenty_margin"
+                app:layout_constraintBottom_toTopOf="@id/tvOtp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.pitch.utils.customviews.EditTextOtp
+                android:id="@+id/tvOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ten_margin"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                app:layout_constraintBottom_toTopOf="@id/tvTimer" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnResendOtp"
+                style="@style/blackTextView"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="@string/resend_otp"
+                android:textColor="@color/start_orange_color"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/btnVerify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimer"
+                style="@style/blackTextView"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:textColor="@color/start_orange_color"
+                app:layout_constraintBottom_toTopOf="@id/btnVerify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="00:15" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnVerify"
+                style="@style/button"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toTopOf="@id/btnChangeNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.4" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnChangeNumber"
+                style="@style/blackTextView"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="@string/change_phone_number"
+                android:textColor="@color/start_orange_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.wallet.WalletFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/whiteTextView"
+            android:layout_marginHorizontal="@dimen/ten_margin"
+            android:layout_marginTop="@dimen/twelve"
+            android:drawableStart="@drawable/ic_wallet"
+            android:drawableEnd="@drawable/ic_vector"
+            android:drawablePadding="@dimen/five_margin"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center_vertical"
+            android:text="@string/balance"
+            android:textSize="@dimen/fifteen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack"
+            tools:targetApi="m" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/login_white_radius_background"
+            android:paddingVertical="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:layout_editor_absoluteX="13dp">
+
+            <LinearLayout
+                android:id="@+id/moneyDeposit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/transcationHistory"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/moneyWithdrabel"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="26dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_ellipse"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_upload_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    style="@style/blackTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:fontFamily="@font/montserrat_regular"
+
+                    android:gravity="center"
+                    android:text="@string/money_withdrawal"
+                    android:textColor="@color/start_orange_color"
+                    android:textSize="@dimen/twelve" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moneyWithdrabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/moneyDeposit"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="26dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_ellipse"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_upload"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    style="@style/blackTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/money_deposit"
+                    android:textColor="@color/start_orange_color"
+                    android:textSize="@dimen/twelve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transcationHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/moneyDeposit"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="26dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icProfile"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_ellipse"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_paper"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle1"
+                    style="@style/blackTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/five_margin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/transaction_history"
+                    android:textColor="@color/start_orange_color"
+                    android:textSize="@dimen/twelve" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMoneyWithDrawal"
+            style="@style/whiteTextView"
+            android:layout_marginHorizontal="@dimen/ten_margin"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="@string/money_withdrawal"
+            android:textSize="@dimen/twelve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llTransaction"
+            tools:targetApi="m" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etWithdrabal"
+            style="@style/editText"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:background="@drawable/white_border_radius_background"
+            android:padding="@dimen/_10sdp"
+            android:hint="@string/add_money"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tvMoneyWithDrawal"
+            app:layout_constraintStart_toStartOf="@id/tvMoneyWithDrawal"
+            app:layout_constraintTop_toBottomOf="@id/tvMoneyWithDrawal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnWithProceed"
+            style="@style/button"
+            android:background="@drawable/button_white_radius_background"
+            android:gravity="center"
+            android:text="@string/process"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/etWithdrabal"
+            app:layout_constraintStart_toStartOf="@+id/etWithdrabal"
+            app:layout_constraintTop_toBottomOf="@id/etWithdrabal"
+            app:layout_constraintWidth_percent="0.3"
+            app:textAllCaps="true" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDeposite"
+            style="@style/whiteTextView"
+            android:layout_marginHorizontal="@dimen/ten_margin"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="@string/pay_money"
+            android:textSize="@dimen/twelve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnWithProceed"
+            tools:targetApi="m" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDeposit"
+            style="@style/editText"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:background="@drawable/white_border_radius_background"
+            android:padding="@dimen/_10sdp"
+            android:hint="@string/add_money"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tvDeposite"
+            app:layout_constraintStart_toStartOf="@id/tvMoneyWithDrawal"
+            app:layout_constraintTop_toBottomOf="@id/tvDeposite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnDepositProceed"
+            style="@style/button"
+            android:background="@drawable/button_white_radius_background"
+            android:gravity="center"
+            android:text="@string/process"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/etWithdrabal"
+            app:layout_constraintStart_toStartOf="@+id/etWithdrabal"
+            app:layout_constraintTop_toBottomOf="@id/etDeposit"
+            app:layout_constraintWidth_percent="0.3"
+            app:textAllCaps="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

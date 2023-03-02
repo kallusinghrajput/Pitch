@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="forgotPasswordViewModel"
+            type="com.pitch.ui.fragments.forgot.ForgotViewMode" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.ForgotFragment">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pana"
+            app:layout_constraintBottom_toTopOf="@id/ltLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ltLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_white_radius_background"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRegister"
+                style="@style/blackTextView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:textSize="@dimen/fifteen"
+                android:text="@string/forgot_your_password"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/tvSubTitle"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubTitle"
+                style="@style/blackTextView"
+                android:layout_width="wrap_content"
+                android:paddingTop="@dimen/five_margin"
+                android:layout_marginBottom="@dimen/twenty_margin"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/enter_your_registered_phone_number_to_retain_your_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/nine"
+                app:layout_constraintBottom_toTopOf="@id/ltMobileNumber"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <include
+                android:id="@+id/ltMobileNumber"
+                layout="@layout/phone_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintBottom_toTopOf="@id/btnForgot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnForgot"
+                style="@style/button"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/send_otp"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

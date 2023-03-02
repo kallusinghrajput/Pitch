@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/otp_radius_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_radius_background.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/draw_bottom_line._grey.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/edit_text_radius_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_login_people.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/navigation_curve_radius.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/search_white_radius_background.xml" value="0.1765" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/bid_row_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/edit_dialog_layout.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_add_project.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_bid.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/fragment_bid_details.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/fragment_blog_detail.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_forgot.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_otp_fragment.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_people.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_project_details.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_projects.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_reset_passsword.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_upload_video.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_verified.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_wallet.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/home_row_layout.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/home_toolbar.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/otp_view_layout.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/password_edit_text.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/phone_edit_text.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/project_row_layout.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/side_bar_layout.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/side_row_layout.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/username_edit_text.xml" value="0.16770833333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

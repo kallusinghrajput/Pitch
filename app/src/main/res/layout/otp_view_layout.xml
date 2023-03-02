@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:elevation="@dimen/five_margin"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDigit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/otp_radius_background"
+        android:gravity="center"
+        android:inputType="number"
+        style="@style/blackTextView"
+        android:textSize="@dimen/twelve"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:nextFocusLeft="@+id/etDigit1"
+        android:nextFocusRight="@+id/etDigit2"
+        android:padding="@dimen/_6sdp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDigit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/otp_radius_background"
+        android:gravity="center"
+        android:textSize="@dimen/twelve"
+
+        android:inputType="number"
+        android:maxLength="1"
+        android:maxLines="1"
+        style="@style/blackTextView"
+        android:nextFocusLeft="@+id/etDigit1"
+        android:nextFocusRight="@+id/etDigit3"
+        android:padding="@dimen/_6sdp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDigit3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/otp_radius_background"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="@dimen/twelve"
+
+        android:maxLength="1"
+        style="@style/blackTextView"
+        android:maxLines="1"
+        android:nextFocusLeft="@+id/etDigit2"
+        android:nextFocusRight="@+id/etDigit4"
+        android:padding="@dimen/_6sdp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDigit4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/otp_radius_background"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:maxLength="1"
+        android:textSize="@dimen/twelve"
+
+        style="@style/blackTextView"
+        android:maxLines="1"
+        android:nextFocusLeft="@+id/etDigit3"
+        android:nextFocusRight="@+id/etDigit4"
+        android:padding="@dimen/_6sdp" />
+
+</LinearLayout>
+

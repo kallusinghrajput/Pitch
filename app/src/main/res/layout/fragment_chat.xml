@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.chats.ChatFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/chat_toolbar" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPeople"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/etChat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:reverseLayout="true"
+            tools:listitem="@layout/chat_row_layout" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etChat"
+            style="@style/editText"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/chat_radius_background"
+            android:hint="@string/type_here"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/_10sdp"
+            android:maxHeight="100dp"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingEnd="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text=",bfbasbmdfmasbmdfsabfbmva" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ivSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_send_message"
+            app:layout_constraintBottom_toBottomOf="@id/etChat"
+            app:layout_constraintEnd_toEndOf="@id/etChat"
+            app:layout_constraintTop_toTopOf="@id/etChat" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ivAttached"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_attached_icon"
+            app:layout_constraintBottom_toBottomOf="@id/etChat"
+            app:layout_constraintStart_toStartOf="@id/etChat"
+            app:layout_constraintTop_toTopOf="@id/etChat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chatModel"
+            type="com.pitch.data.model.ChatModelModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            isFirstTime="@{chatModel.first"
+            android:src="@drawable/dummy_image_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/blackTextView"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/chat_radius_background"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="start"
+            android:padding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@{chatModel.message}"
+            android:textSize="@dimen/eleven"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toTopOf="@id/ivImage"
+            tools:text="@string/please_enter_the_for_digit_otp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

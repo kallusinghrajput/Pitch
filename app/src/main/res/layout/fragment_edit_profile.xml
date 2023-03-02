@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.profile.EditProfileFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back_icon"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/whiteTextView"
+            android:layout_marginHorizontal="@dimen/ten_margin"
+            android:layout_marginTop="@dimen/twelve"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/profile"
+
+            android:textSize="@dimen/twelve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:background="@drawable/ic_rectangle_34"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ltLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:background="@drawable/otp_white_radius_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUsernameTitle"
+                style="@style/blackTextView"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/name"
+                android:textSize="@dimen/twelve"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUserName"
+                style="@style/editText"
+                android:layout_marginTop="@dimen/five_margin"
+                android:background="@drawable/draw_bottom_line_grey"
+
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="@dimen/_10sdp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="Terrance Becker"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvUsernameTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailTitle"
+                style="@style/blackTextView"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/emails"
+                android:textSize="@dimen/twelve"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/etUserName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                style="@style/editText"
+
+                android:layout_marginTop="@dimen/five_margin"
+                android:background="@drawable/draw_bottom_line_grey"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="@dimen/_10sdp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="terrancebecker@gmail.com"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvEmailTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneNumberTitle"
+                style="@style/blackTextView"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/phone_no"
+                android:textSize="@dimen/twelve"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPhoneNumber"
+                style="@style/editText"
+                android:layout_marginTop="@dimen/five_margin"
+                android:background="@drawable/draw_bottom_line_grey"
+
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="@dimen/_10sdp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="895485756"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintStart_toStartOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSave"
+                style="@style/button"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:background="@drawable/button_radius_background"
+                android:gravity="center"
+                android:text="@string/save"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/tvUsernameTitle"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+                app:layout_constraintWidth_percent="0.3"
+                app:textAllCaps="true" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icProfile"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:background="@drawable/ic_ellipse"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_profile_dummy"
+            app:layout_constraintBottom_toTopOf="@id/ltLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ltLayout" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_background"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@id/icProfile"
+            app:layout_constraintEnd_toEndOf="@id/icProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

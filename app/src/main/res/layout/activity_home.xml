@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="com.pitch.ui.activities.home.HomeViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient"
+            tools:context=".ui.activities.home.HomeActivity">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/home_toolbar" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView1"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+               app:layout_constraintBottom_toTopOf="@id/bottomBar"
+     app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:navGraph="@navigation/home" />
+
+            <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:mbn_backgroundBottomColor="@color/white"
+                app:mbn_circleColor="@color/start_orange_color"
+                app:mbn_defaultIconColor="@color/start_orange_color"
+                app:mbn_rippleColor="@color/black"
+                app:mbn_selectedIconColor="@color/white"
+                app:mbn_shadowColor="#1f212121" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/navigation_curve_radius"
+            android:fitsSystemWindows="false">
+
+            <include
+                android:id="@+id/navigationView"
+                layout="@layout/side_bar_layout" />
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

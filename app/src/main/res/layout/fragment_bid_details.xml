@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataModel"
+            type="com.pitch.data.model.RatingModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".ui.fragments.bid.BidDetailsFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatings"
+            style="@style/whiteTextView"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/fifteen"
+            android:text="@string/rate"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+             />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/dummy_image_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_corner_radius="@dimen/_4sdp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/blackTextView"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/five_margin"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@{dataModel.title}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twelve"
+                        app:layout_constraintBottom_toTopOf="@id/tvSubTitle"
+                        app:layout_constraintEnd_toStartOf="@id/btnChat"
+                        app:layout_constraintStart_toEndOf="@id/ivImage"
+                        app:layout_constraintTop_toTopOf="@id/ivImage"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="Magna dignissim" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSubTitle"
+                        style="@style/blackTextView"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:maxLines="1"
+                        android:text="@{dataModel.subTitle}"
+                        android:textColor="@color/home_sub_heading_color"
+                        android:textSize="@dimen/nine"
+                        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        tools:text="@string/please_enter_the_for_digit_otp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnChat"
+                        style="@style/button"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_50sdp"
+                        android:text="@string/chat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvTitle"
+                        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrice"
+                        style="@style/blackTextView"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/progress_bar_color"
+                        android:padding="@dimen/_2sdp"
+                        android:text="@{dataModel.price}"
+                        android:textSize="@dimen/eleven"
+                        app:layout_constraintEnd_toEndOf="@id/btnChat"
+                        app:layout_constraintStart_toStartOf="@id/btnChat"
+                        app:layout_constraintTop_toBottomOf="@id/btnChat"
+                        tools:text="40.5 $" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="@{dataModel.rating}"
+                        android:theme="@style/RatingBar"
+                        app:layout_constraintStart_toStartOf="@id/tvTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+                        tools:rating="3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRating"
+                        style="@style/blackTextView"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:maxLines="1"
+                        android:text="@{String.valueOf(dataModel.rating)}"
+                        android:textSize="@dimen/nine"
+                        app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                        app:layout_constraintStart_toEndOf="@id/ratingBar"
+                        app:layout_constraintTop_toTopOf="@id/ratingBar"
+                        tools:text="4.5" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDescription"
+                        style="@style/blackTextView"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Donec condimentum placerat lobortis duis nulla lacus mattis id interdum. Facilisi eget nisl nullam risus. Aliquam id sed pretium ac lectus euismod. Proin eget sed nulla adipiscing morbi euismod. Lacus, consequat cras iaculis ipsum eu lorem id iaculis sem. Sapien semper ipsum nulla suspendisse tempus. Euismod odio phasellus ac mattis in in aliquam velit nisi. Justo turpis egestas sed sed dui. Fermentum vel aliquet ut sed ame."
+                        android:textSize="@dimen/eleven"
+                        app:layout_constraintEnd_toEndOf="@id/btnChat"
+                        app:layout_constraintStart_toStartOf="@id/ivImage"
+                        app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivProjectBanner"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/video_thumbnail"
+                        app:layout_constraintDimensionRatio="1.8"
+                        app:layout_constraintStart_toStartOf="@id/ivImage"
+                        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                        app:riv_corner_radius="@dimen/_4sdp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProjectTitle"
+                        style="@style/blackTextView"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/five_margin"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Magna dignissim"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@id/tvBannerSubTitle1"
+                        app:layout_constraintStart_toEndOf="@id/ivProjectBanner"
+                        app:layout_constraintTop_toTopOf="@id/ivProjectBanner"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBannerSubTitle"
+                        style="@style/blackTextView"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:maxLines="3"
+                        android:text="Tempus elit ultrices mauris ultrices id ullamcorper congue. Dolor tortor mattis fam, Dolor tortor mattis fam,"
+                        android:textSize="@dimen/eleven"
+                        app:layout_constraintEnd_toEndOf="@id/tvProjectTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvProjectTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvProjectTitle" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBannerSubTitle1"
+                        style="@style/blackTextView"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Pharetra vestibulum vulputate urna mauris tincidunt ipsum dui. Ut leo lorem tellus pellentesque ornare tempus rhoncus vitae. Velit sit suspendisse est velit bibendum ut. Eget dictumst aliquet nec quis aliquam. Lectus mauris varius congue suspendisse porttitor egestas. Ac, quis quis mi at sit lobortis tortor a consectetur. Quis sed enim ultricies elit eget congue ac. Facilisis mattis in diam turpis nunc tellus. Tristique id tellus, ullamcorper malesuada vitae aliquet vulputate. Lacus dolor, platea in quisque nulla. Egestas adipiscing vulputate nibh euismod pretium mi iaculis. Malesuada cursus vestibulum malesuada non lectus Read More"
+                        android:textSize="@dimen/eleven"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/ivImage"
+                        app:layout_constraintTop_toBottomOf="@id/ivProjectBanner" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

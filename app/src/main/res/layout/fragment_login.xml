@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.pitch.ui.fragments.login.LoginViewMode" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_120sdp"
+            android:background="@drawable/background_gradient"
+            tools:context=".ui.fragments.login.LoginFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/whiteTextView"
+                android:layout_marginHorizontal="@dimen/twenty_margin"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/login"
+                android:textSize="@dimen/twenty_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/white_circle_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:src="@drawable/ic_people_icon" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/layout"
+                android:layout_marginHorizontal="@dimen/twenty_margin"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/login_white_radius_background"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/ltLogin"
+                app:layout_constraintStart_toStartOf="@id/ltLogin"
+                app:layout_constraintTop_toBottomOf="@id/ltLogin">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegister"
+                    style="@style/blackTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/dont_have_an_account"
+                    android:textColor="@color/hint_color"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toStartOf="@id/btnRegister"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent " />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnRegister"
+                    style="@style/blackTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/start_orange_color"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRegister"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvRegister"
+                    app:layout_constraintTop_toTopOf="@id/tvRegister" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ltLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/login_white_radius_background"
+                android:elevation="@dimen/five_margin"
+                android:padding="@dimen/twenty_margin"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/ivImage">
+
+                <include
+                    android:id="@+id/ltUserName"
+                    layout="@layout/username_edit_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ltPassword"
+                    layout="@layout/password_edit_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ltUserName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnLogin"
+                    style="@style/button"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ltPassword"
+                    app:layout_constraintWidth_percent="0.4" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tbForgot"
+                    style="@style/blackTextView"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/start_orange_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

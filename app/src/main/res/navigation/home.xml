@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    app:startDestination="@id/homeFragment">
+    <action
+        android:id="@+id/toHome"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/botton_anim"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+
+    <action
+        android:id="@+id/toAdd"
+        app:destination="@id/addFragment"
+        app:enterAnim="@anim/botton_anim"
+        app:restoreState="true"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/toNotification"
+        app:destination="@id/notificationFragment"
+        app:enterAnim="@anim/botton_anim"
+        app:restoreState="true"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/toDashboard"
+        app:destination="@id/dashboardFragment"
+        app:enterAnim="@anim/right_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:exitAnim="@anim/left_anim" />
+
+    <action
+        android:id="@+id/toProject"
+        app:destination="@id/projectsFragment"
+        app:enterAnim="@anim/right_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:exitAnim="@anim/left_anim" />
+
+    <action
+        android:id="@+id/toBlogDetails"
+        app:destination="@id/blogDetailFragment"
+        app:enterAnim="@anim/right_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:exitAnim="@anim/left_anim" />
+
+
+    <action
+        android:id="@+id/toFeedback"
+        app:destination="@id/feedbackFragment"
+        app:enterAnim="@anim/right_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:exitAnim="@anim/left_anim" />
+
+    <action
+        android:id="@+id/toScussedFeedback"
+        app:destination="@id/successFeedFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+
+    <action
+        android:id="@+id/toBid"
+        app:destination="@id/bidFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim" />
+
+    <action
+        android:id="@+id/toAddProject"
+        app:destination="@id/addProjectFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/toBlog"
+        app:destination="@id/blogFragment"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim" />
+
+    <action
+        android:id="@+id/toChat"
+        app:destination="@id/chatFragment"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim" />
+    <action
+        android:id="@+id/toWallet"
+        app:destination="@id/walletFragment"
+        app:enterAnim="@anim/botton_anim"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+    <action
+        android:id="@+id/toProfile"
+        app:destination="@id/profileFragment"
+        app:enterAnim="@anim/botton_anim"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/toPeople"
+        app:destination="@id/peopleFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim" />
+
+    <action
+        android:id="@+id/toEdit"
+        app:destination="@id/editProfileFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim" />
+
+    <action
+        android:id="@+id/toAddProjectDetails"
+        app:destination="@id/projectDetailsFragment"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim" />
+
+    <action
+        android:id="@+id/toBidDetail"
+        app:destination="@id/bidDetailsFragment"
+        app:enterAnim="@anim/right_anim"
+        app:exitAnim="@anim/left_anim"
+        app:popEnterAnim="@anim/popup_enter_anim"
+        app:popExitAnim="@anim/popup_exit_anim" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pitch.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_walletFragment"
+            app:destination="@id/walletFragment"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.pitch.ui.fragments.add.AddFragment"
+        android:label="AddFragment">
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/toUploadVideo"
+            app:destination="@id/uploadVideoFragment"
+            app:enterAnim="@anim/right_anim"
+            app:popEnterAnim="@anim/popup_enter_anim"
+            app:popExitAnim="@anim/popup_exit_anim"
+            app:exitAnim="@anim/left_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.pitch.ui.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.pitch.ui.fragments.wallet.WalletFragment"
+        android:label="WalletFragment">
+        <action
+            android:id="@+id/action_walletFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadVideoFragment"
+        android:name="com.pitch.ui.fragments.upload.UploadVideoFragment"
+        android:label="UploadVideoFragment">
+        <action
+            android:id="@+id/action_uploadVideoFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <argument
+            android:name="isUri"
+            android:defaultValue="null"
+            app:argType="string" />
+        <argument
+            android:name="isThumbnail"
+            android:defaultValue="null"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/projectDetailsFragment"
+        android:name="com.pitch.ui.fragments.addproject.ProjectDetailsFragment"
+        android:label="ProjectDetailsFragment">
+        <action
+            android:id="@+id/action_projectDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.pitch.ui.fragments.chats.PeopleFragment"
+        android:label="PeopleFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.pitch.ui.fragments.chats.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/bidFragment"
+        android:name="com.pitch.ui.fragments.bid.BidFragment"
+        android:label="BidFragment" />
+    <fragment
+        android:id="@+id/addProjectFragment"
+        android:name="com.pitch.ui.fragments.addproject.AddProjectFragment"
+        android:label="AddProjectFragment" />
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.pitch.ui.fragments.blog.BlogFragment"
+        android:label="BlogFragment" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.pitch.ui.fragments.feedback.FeedbackFragment"
+        android:label="FeedbackFragment" />
+    <fragment
+        android:id="@+id/successFeedFragment"
+        android:name="com.pitch.ui.fragments.feedback.SuccessFeedFragment"
+        android:label="SuccessFeedFragment" />
+    <fragment
+        android:id="@+id/blogDetailFragment"
+        android:name="com.pitch.ui.fragments.blog.BlogDetailFragment"
+        android:label="BlogDetailFragment" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.pitch.ui.fragments.dashboard.DashboardFragment"
+        android:label="DashboardFragment" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.pitch.ui.fragments.addproject.ProjectsFragment"
+        android:label="ProjectsFragment" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Projects" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.pitch.ui.fragments.profile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/bidDetailsFragment"
+        android:name="com.pitch.ui.fragments.bid.BidDetailsFragment"
+        android:label="BidDetailsFragment" >
+        <argument
+            android:name="model"
+            app:argType="com.pitch.data.model.RatingModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.pitch.ui.fragments.notification.NotificationFragment"
+        android:label="NotificationFragment" />
+
+
+</navigation>
